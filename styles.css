@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+
+body {
+  color: #222;
+  background-color: mediumpurple;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: lighter;
+  line-height: normal;
+  margin: 0px;
+  width: 100%;
+}
+
+.header {
+  background-color: hotpink;
+  font-family: Poiret One;
+  font-weight: normal;
+  font-size: 50px;
+  text-align: center;
+  grid-area: h;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0px;
+}
+
+.menu {
+  background-color: hotpink;
+  font-family: Poiret One;
+  font-weight: normal;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.menu li {
+  list-style-type: none;
+  overflow: hidden;
+  display: inline;
+  padding: 10px;
+}
+
+.widget {
+  background-color: lawngreen;
+  grid-area: w;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px;
+}
+
+.content {
+  background-color: darksalmon;
+  grid-area: c;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px;
+}
+
+.footer {
+  background-color: aqua;
+  font-size: 12px;
+  grid-area: f;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0px;
+}
+
+body h2 {
+  font-family: Poiret One;
+  font-weight: normal;
+  font-size: 30px;
+}
+
+p {
+  width: 98%;
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  display: grid;
+  margin-left: 0px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto auto 100px 60px;
+  grid-template-areas:
+    "h h h h h h h h"
+    "c c c c c c c c"
+    "w w w w w w w w"
+    "f f f f f f f f";
+}
+
+a {
+  text-decoration: none;
+  padding-right: 10px;
+  color: inherit;
+}
+
+/* MEDIA QUERIES */
+
+/* DESKTOP */
+
+@media (min-width: 960px) {
+  body {
+    font-size: 14px;
+    line-height: 1.2em;
+  }
+
+  body h2 {
+    font-size: 35px;
+  }
+
+  .header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    line-height: 1.3em;
+    flex-wrap: wrap;
+    text-align: end;
+    align-items: flex-start;
+  }
+
+  .menu {
+    line-height: 1.2em;
+    font-size: 28px;
+    flex-direction: column;
+  }
+
+  .container {
+    grid-template-rows: 100% auto 100px 80px;
+    grid-template-areas:
+      "h c c c c c c c"
+      "h c c c c c c c"
+      "h w w w w w w w"
+      "h f f f f f f f";
+  }
+}
+
+/* WIDESCREEN */
+
+@media (min-width: 1280px) {
+  body {
+    font-size: 14px;
+    line-height: 1.2em;
+  }
+
+  body h2 {
+    font-size: 40px;
+  }
+
+  .header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+    text-align: end;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .content {
+    margin: 0;
+  }
+
+  .widget {
+    margin: 0;
+  }
+
+  .footer {
+    margin: 0;
+  }
+
+  .container {
+    grid-template-rows: 100px 400px 100px 100px;
+    grid-template-areas:
+      "h c c c c c c w"
+      "h c c c c c c w"
+      "h c c c c c c w"
+      "h f f f f f f w";
+  }
+}
